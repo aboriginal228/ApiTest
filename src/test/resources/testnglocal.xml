@@ -1,0 +1,80 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="KasperskyTestSuit">
+
+    <test name="getTestSortingCheck"   >
+        <parameter name="link"  value="posts"/>
+        <parameter name="code"  value="200"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getTestSortingCheck" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getPost"   >
+        <parameter name="link"  value="posts/99"/>
+        <parameter name="code"  value="200"/>
+        <parameter name="expUserId"  value="10"/>
+        <parameter name="expId"  value="99"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getPost" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getEmpty"   >
+        <parameter name="postNumber"  value="150"/>
+        <parameter name="code"  value="404"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getEmpty" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getPostResponse"   >
+        <parameter name="link"  value="posts"/>
+        <parameter name="code"  value="201"/>
+        <parameter name="userIdContains"  value="1"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getPostResponse" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getUsers"   >
+        <parameter name="link"  value="users"/>
+        <parameter name="code"  value="200"/>
+        <parameter name="userId"  value="5"/>
+        <parameter name="input"  value="{ &quot;id&quot;: 5, &quot;name&quot;: &quot;Chelsey Dietrich&quot;, &quot;username&quot;: &quot;Kamren&quot;, &quot;email&quot;: &quot;Lucio_Hettinger@annie.ca&quot;, &quot;address&quot;: { &quot;street&quot;: &quot;Skiles Walks&quot;, &quot;suite&quot;: &quot;Suite 351&quot;, &quot;city&quot;: &quot;Roscoeview&quot;, &quot;zipcode&quot;: &quot;33263&quot;, &quot;geo&quot;: { &quot;lat&quot;: &quot;-31.8129&quot;, &quot;lng&quot;: &quot;62.5342&quot; } }, &quot;phone&quot;: &quot;(254)954-1289&quot;, &quot;website&quot;: &quot;demarco.info&quot;, &quot;company&quot;: { &quot;name&quot;: &quot;Keebler LLC&quot;, &quot;catchPhrase&quot;: &quot;User-centric fault-tolerant solution&quot;, &quot;bs&quot;: &quot;revolutionize end-to-end systems&quot; } }"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getUsers" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="getUser"   >
+        <parameter name="link"  value="users/5"/>
+        <parameter name="code"  value="200"/>
+        <parameter name="input"  value="{ &quot;id&quot;: 5, &quot;name&quot;: &quot;Chelsey Dietrich&quot;, &quot;username&quot;: &quot;Kamren&quot;, &quot;email&quot;: &quot;Lucio_Hettinger@annie.ca&quot;, &quot;address&quot;: { &quot;street&quot;: &quot;Skiles Walks&quot;, &quot;suite&quot;: &quot;Suite 351&quot;, &quot;city&quot;: &quot;Roscoeview&quot;, &quot;zipcode&quot;: &quot;33263&quot;, &quot;geo&quot;: { &quot;lat&quot;: &quot;-31.8129&quot;, &quot;lng&quot;: &quot;62.5342&quot; } }, &quot;phone&quot;: &quot;(254)954-1289&quot;, &quot;website&quot;: &quot;demarco.info&quot;, &quot;company&quot;: { &quot;name&quot;: &quot;Keebler LLC&quot;, &quot;catchPhrase&quot;: &quot;User-centric fault-tolerant solution&quot;, &quot;bs&quot;: &quot;revolutionize end-to-end systems&quot; } }"/>
+        <classes>
+            <class name="example.ApiTest">
+                <methods>
+                    <include name="getUser" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
